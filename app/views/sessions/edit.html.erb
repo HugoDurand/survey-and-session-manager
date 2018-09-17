@@ -1,0 +1,64 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2">
+      <h1>Admin</h1>
+      <nav class="nav">
+        <ul>
+          <li>
+            <a href="<%= utilisateurs_path %>">Utilisateurs</a>
+          </li>
+          <li>
+            <a href="<%= sessions_path %>">Sessions</a>
+          </li>
+          <li>
+            <a>Participants</a>
+          </li>
+          <li>
+            <a>Questionnaires</a>
+          </li>
+          <li>
+            <a>Questions</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="col-md-10 containerAdmin">
+      <%= link_to 'Se déconnecter', destroy_user_session_path, method: :delete, :class=>"deco" %>
+
+
+
+      <%= form_for @session_edit do |session_form| %>
+        <div class="form-group">
+          <label for="nom">num_session</label>
+          <%= session_form.text_field :num_session, class: "col-md-12 form-control", :input_html => { id:'num_session' },:required => true%>
+        </div>
+        <div class="form-group">
+          <label for="prenom">intervenant</label>
+          <%= session_form.text_field :intervenant, class: "col-md-12 form-control", :input_html => { id:'intervenant' },:required => true%>
+        </div>
+        <div class="form-group">
+          <label for="prenom">date_debut</label>
+          <%= session_form.text_field :date_debut, class: "col-md-12 form-control", :input_html => { id:'date_debut' },:required => true%>
+        </div>
+        <div class="form-group">
+          <label for="prenom">date_fin</label>
+          <%= session_form.text_field :date_fin, class: "col-md-12 form-control", :input_html => { id:'date_fin' },:required => true%>
+        </div>
+        <div class="form-group">
+          <label for="prenom">id_questionnaire</label>
+          <%= session_form.text_field :id_questionnaire, class: "col-md-12 form-control", :input_html => { id:'id_questionnaire' },:required => true%>
+        </div>
+        <div class="form-group">
+          <label for="prenom">id_client</label>
+          <%= session_form.text_field :id_client, class: "col-md-12 form-control", :input_html => { id:'id_client' },:required => true%>
+        </div>
+        <button type="submit" class="btn_valider">Valider</button>
+        </div>
+      <% end %>
+
+
+
+
+    </div>
+  </div>
+</div>

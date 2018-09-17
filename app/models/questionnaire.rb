@@ -1,0 +1,3 @@
+class Questionnaire < ApplicationRecord
+
+end

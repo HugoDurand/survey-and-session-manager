@@ -1,0 +1,131 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500,800');
+html, body{
+
+    background: linear-gradient(#B993D6, #8CA6DB)!important;
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0 auto !important;
+    /*background-color: #3C826F !important;*/
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+h1{
+    text-align: center;
+    color: #F6F6F6 !important;
+    font-size: 4em !important;
+}
+
+.container{
+    margin-top: 2vh;
+    height: 80vh;
+    background-color: #F6F6F6;
+    border-radius: 5px;
+    color: #262727;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.containerAdmin{
+    background-color: #F6F6F6;
+    height: 100vh;
+    color: #262727;
+
+}
+
+.deco{
+    float: right;
+}
+
+.nav ul li{
+    color: #F6F6F6;
+    list-style: none;
+    border-bottom: #F6F6F6 1px solid;
+    margin-top: 10vh;
+    cursor: pointer;
+    width: 50%;
+    transition: .3s ease;
+}
+
+.nav ul li:hover{
+
+    width: 100%;
+}
+
+.nav ul li a {
+     text-decoration: none;
+    color: #F6F6F6;
+ }
+
+.nav ul li a:visited {
+    text-decoration: none;
+    color: #F6F6F6;
+}
+
+.list-group-item{
+    text-align: center;
+    background-color: #F6F6F6 !important;
+}
+
+.list-group-item:hover{
+    cursor: pointer;
+    background-color: #adadad !important;
+    transition-duration: 0.2s;
+}
+
+
+.liste_participant{
+    border-right: 1px solid #999999;
+    overflow-y:auto;
+    margin-top: 20vh;
+}
+
+.inscription_participant{
+    margin-top: 20vh;
+}
+
+.btn_valider{
+    border: none;
+    color: #F6F6F6 !important;
+    text-align: center;
+    background-color: #94A1DA;
+    cursor: pointer;
+    width: 150px;
+    height: 50px;
+    margin-top: 2vh;
+    line-height: 3.5em;
+}
+.btn_valider:hover{
+    background-color: #626d9b;
+    transition: 0.2s;
+}
+
+
+.btn_clq{
+    color: #F6F6F6 !important;
+    text-align: center;
+    background-color: #94A1DA;
+    cursor: pointer;
+    width: 300px;
+    height: 50px;
+    line-height: 3.5em;
+    margin-top: 15vh;
+}
+.btn_clq:hover{
+    background-color: #626d9b;
+    transition: 0.2s;
+}
+

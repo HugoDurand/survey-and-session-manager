@@ -1,0 +1,65 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2">
+      <h1>Admin</h1>
+      <nav class="nav">
+        <ul>
+          <li>
+            <a href="<%= utilisateurs_path %>">Utilisateurs</a>
+          </li>
+          <li>
+            <a href="<%= sessions_path %>">Sessions</a>
+          </li>
+          <li>
+            <a>Participants</a>
+          </li>
+          <li>
+            <a>Questionnaires</a>
+          </li>
+          <li>
+            <a>Questions</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="col-md-10 containerAdmin">
+      <%= link_to 'Se déconnecter', destroy_user_session_path, method: :delete, :class=>"deco" %>
+
+      <a href="<%= new_session_path %>">Create new</a>
+
+
+      <table class="table table-striped">
+        <thead>
+        <tr>
+          <th scope="col">Num_Session</th>
+          <th scope="col">Itervenant</th>
+          <th scope="col">Date_Début</th>
+          <th scope="col">Date_Fin</th>
+          <th scope="col">Id_Questionnaire</th>
+          <th scope="col">Id_Client</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        <% @sessions.each do |session| %>
+
+
+            <tr>
+              <td><%= session.num_session %></td>
+              <td><%= session.intervenant %></td>
+              <td><%= session.date_debut %></td>
+              <td><%= session.date_fin %></td>
+              <td><%= session.id_questionnaire %></td>
+              <td><%= session.id_client %></td>
+              <td><a href ='<%= edit_session_path(session.id) %>'>Edit</a></td>
+            </tr>
+
+        <% end %>
+
+
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+</div>

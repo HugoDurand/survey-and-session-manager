@@ -1,0 +1,20 @@
+<div class="container-fluid">
+  <h1>EduEval</h1>
+  <div class="col-md-10 col-md-offset-1 container">
+
+    Renseignez votre numéro de session ci-dessous
+
+<form method="post" action="/">
+  <div class="form-group">
+  <label for="nom">N° :</label>
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type="text" name="session" placeholder="Numéro de session">
+    <button type="submit" name="submit">Valider</button>
+  </div>
+</form>
+
+
+</div>
+</div>
+
+

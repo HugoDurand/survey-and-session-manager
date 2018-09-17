@@ -1,0 +1,33 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2">
+      <h1>Admin</h1>
+      <nav class="nav">
+        <ul>
+          <li>
+            <a href="<%= utilisateurs_path %>">Utilisateurs</a>
+          </li>
+          <li>
+            <a href="<%= sessions_path %>">Sessions</a>
+          </li>
+          <li>
+            <a>Participants</a>
+          </li>
+          <li>
+            <a>Questionnaires</a>
+          </li>
+          <li>
+            <a>Questions</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="col-md-10 containerAdmin">
+      <%= link_to 'Se déconnecter', destroy_user_session_path, method: :delete, :class=>"deco" %>
+
+
+
+
+    </div>
+  </div>
+</div>
